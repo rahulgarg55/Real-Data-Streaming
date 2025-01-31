@@ -1,8 +1,6 @@
 import { SKDB } from "skdb";
 import { skdbDevServerDb, createLocalDbConnectedTo } from "skdb-dev";
 
-// Connect to the remote server and create a local instance mirroring
-// the `tasks` table
 
 const remoteDb = await skdbDevServerDb("dummy", "localhost", 3586);
 await remoteDb.schema(
@@ -15,7 +13,6 @@ await localDb.mirror({
   expectedColumns: "(id STRING PRIMARY KEY, name STRING, complete INTEGER, skdb_access STRING)"
 });
 
-// Watch for changes to uncompleted tasks; log any additions or removals
 
 await localDb.exec(
   `CREATE VIRTUAL VIEW uncompleted_tasks AS
@@ -26,7 +23,6 @@ await localDb.watchChanges(
   "SELECT * FROM uncompleted_tasks",
   {},
   (initial_rows) => {
-    /* ignore */
   },
   (added, removed) => {
     for (let row of added) {

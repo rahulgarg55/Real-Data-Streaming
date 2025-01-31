@@ -160,7 +160,6 @@ function AddTasks() {
     setTaskName("");
   };
 
-  // 13 is keycode for enter
   const onKeyDown = ({ keyCode }: { keyCode: number }) => {
     if (keyCode == 13) addTask(taskName);
   };
