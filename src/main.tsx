@@ -4,6 +4,12 @@ import App from "./App.tsx";
 import { SKDBProvider } from "skdb-react";
 import { skdbDevServerDb, createLocalDbConnectedTo } from "skdb-dev";
 
+declare global {
+  interface Window {
+    skdb: any;
+  }
+}
+
 async function init() {
   const remoteDb = await skdbDevServerDb("dummy", "localhost", 3586);
 

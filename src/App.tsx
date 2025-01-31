@@ -8,14 +8,6 @@ import { TableContainer, TablePagination } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import HeartIcon from "@mui/icons-material/FavoriteBorder";
-import FullHeartIcon from "@mui/icons-material/Favorite";
-import TagIcon from "@mui/icons-material/Tag";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import MenuIcon from "@mui/icons-material/Menu";
-import { Drawer, Divider, Button, MenuItem, Menu } from "@mui/material";
-import { Chip, Checkbox } from "@mui/material";
 
 type Option = {
   filter: string;
