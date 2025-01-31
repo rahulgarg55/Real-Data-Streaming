@@ -244,7 +244,6 @@ function Header({
   text,
   onChange,
   onPage,
-  handleDrawerToggle,
 }: {
   text: string;
   onChange: (text: string) => void;
