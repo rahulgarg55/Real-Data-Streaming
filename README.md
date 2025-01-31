@@ -13,6 +13,11 @@ This project is a task management application built with React, TypeScript, and 
 
 
 ## Getting Started
+Start the server
+For your convenience, SkipLabs provides a Docker image via Docker Hub that you can use to run a local SKDB server. Run the following command in a separate terminal window, and you will have a server running at localhost:3586.
+
+
+docker run -it -p 3586:3586 skiplabs/skdb-dev-server:quickstart
 
 ### Prerequisites
 
